@@ -34,4 +34,5 @@
 
 (defn -main
   [& args]
+  (prn "Starting application...")
   (app-loop))
