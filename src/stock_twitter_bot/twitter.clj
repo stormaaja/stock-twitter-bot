@@ -17,4 +17,4 @@
 (defn post
   [text link]
   (statuses-update :oauth-creds credentials
-                 :params {:status (str text " " link)}))
+                 :params {:status (str (truncate text) " " link)}))
