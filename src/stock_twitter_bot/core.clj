@@ -8,6 +8,8 @@
 
 (defonce last-updated (atom (new java.util.Date)))
 
+(def tweet-interval 60000)
+
 (defn tweet-news-entry
   [entry]
   (twitter/post (:title entry) (:link entry)))
@@ -28,7 +30,7 @@
         (tweet-untweeted-news)
         (catch Exception ex
           (log/error ex "Error occurred")))
-      (Thread/sleep 60000))))
+      (Thread/sleep tweet-interval))))
 
 (defn -main
   [& args]
