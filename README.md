@@ -32,6 +32,7 @@ Botti, joka kokoaa suomalaisten osakeuutisten virtoja ja twiittailee niitä.
 ## TODO
 
 - Check http codes of parser and twitter
+- Maybe Slack integration
 
 ## License
 
