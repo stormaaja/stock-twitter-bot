@@ -33,6 +33,7 @@ Botti, joka kokoaa suomalaisten osakeuutisten virtoja ja twiittailee niitä.
 
 - Check http codes of parser and twitter
 - Maybe Slack integration
+- Maybe intelligent $STOCK parser
 
 ## License
 
