@@ -20,7 +20,7 @@
     (dorun
       (map tweet-news-entry
         (gw/convert-entries-for-twitter news)))
-    (if
+    (when
       (> (count news) 0)
       (reset!
         last-updated
