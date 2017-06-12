@@ -29,6 +29,12 @@ Botti, joka kokoaa suomalaisten osakeuutisten virtoja ja twiittailee niitä.
     $ lein uberjar    
     $ java -jar target/stock-twitter-bot-0.1.0-standalone.jar
 
+### Development with repl
+
+    lein with-profile +dev repl
+
+This outputs loggings to console.
+
 ## TODO
 
 - Check http codes of parser and twitter
