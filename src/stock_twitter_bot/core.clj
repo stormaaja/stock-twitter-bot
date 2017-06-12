@@ -27,10 +27,12 @@
   []
   (while true
     (do
+      (log/debug "Checking for new data")
       (try
         (tweet-untweeted-news)
         (catch Exception ex
-          (log/error ex "Error occurred")))
+          (log/error ex "Error occurred"))
+        (finally (log/debug "Checking completed")))
       (Thread/sleep tweet-interval))))
 
 (defn -main
