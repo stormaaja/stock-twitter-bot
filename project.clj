@@ -1,4 +1,4 @@
-(defproject stock-twitter-bot "0.1.0"
+(defproject stock-twitter-bot "0.1.1"
   :description "Stock Twitter Bot - Osakeuutisbotti"
   :url "https://github.com/stormaaja/stock-twitter-bot"
   :license {:name "MIT"
