@@ -10,6 +10,10 @@
   [d1 d2]
   (> (compare d1 d2) 0))
 
+(defn latter-entry
+  [e1 e2]
+  (if (after? (:updated-date e1) (:updated-date e2)) e1 e2))
+
 (defn link-matches-language?
   [link language-pattern]
   (some? (re-matches language-pattern link)))
@@ -46,3 +50,7 @@
   (filter
     #(after? (:updated-date %) date-time)
     (get-finnish-news)))
+
+(defn get-latest-entry
+  [col]
+  (reduce latter-entry col))
