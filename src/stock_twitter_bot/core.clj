@@ -20,8 +20,11 @@
     (dorun
       (map tweet-news-entry
         (gw/convert-entries-for-twitter news)))
-    (if (> (count news) 0)
-      (reset! last-updated (:updated-date (first news))))))
+    (if
+      (> (count news) 0)
+      (reset!
+        last-updated
+        (:updated-date (gw/get-latest-entry news))))))
 
 (defn app-loop
   []
